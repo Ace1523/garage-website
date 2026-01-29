@@ -13,15 +13,15 @@
         }
 
         :root {
-            --primary: #0066FF;
-            --primary-dark: #0052CC;
-            --secondary: #00D4AA;
-            --dark: #1A1A2E;
-            --gray-900: #111827;
-            --gray-700: #374151;
-            --gray-500: #6B7280;
-            --gray-300: #D1D5DB;
-            --gray-100: #F3F4F6;
+            --primary: #FF6B00;
+            --primary-dark: #E05A00;
+            --secondary: #FFB800;
+            --dark: #121212;
+            --gray-900: #1A1A1A;
+            --gray-700: #2D2D2D;
+            --gray-500: #6B6B6B;
+            --gray-300: #B0B0B0;
+            --gray-100: #F5F5F5;
             --white: #FFFFFF;
         }
 
@@ -98,7 +98,7 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--dark) 0%, #2D2D44 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, #1F1F1F 100%);
             display: flex;
             align-items: center;
             padding: 8rem 2rem 4rem;
@@ -113,7 +113,7 @@
             right: -20%;
             width: 80%;
             height: 150%;
-            background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, transparent 60%);
+            background: radial-gradient(circle, rgba(255, 107, 0, 0.15) 0%, transparent 60%);
             pointer-events: none;
         }
 
@@ -171,7 +171,7 @@
         .btn-primary:hover {
             background: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
         }
 
         .btn-secondary {
@@ -198,18 +198,14 @@
         .hero-image-main {
             width: 100%;
             height: 400px;
-            background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80') center/cover;
+            background: url('images/after/after1.png') center/cover;
             border-radius: 20px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
             position: relative;
         }
 
         .hero-image-main::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(0, 102, 255, 0.3) 0%, rgba(0, 212, 170, 0.3) 100%);
-            border-radius: 20px;
+            display: none;
         }
 
         .hero-stats {
@@ -233,6 +229,72 @@
             font-size: 0.9rem;
         }
 
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: var(--gray-100);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            text-align: center;
+        }
+
+        .about-text p {
+            color: var(--gray-700);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-statement {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+            color: var(--dark) !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .value-item h4 {
+            color: var(--dark);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-item p {
+            color: var(--gray-500);
+            font-size: 0.95rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Services Section */
         .services {
             padding: 6rem 2rem;
@@ -251,7 +313,7 @@
 
         .section-tag {
             display: inline-block;
-            background: rgba(0, 102, 255, 0.1);
+            background: rgba(255, 107, 0, 0.1);
             color: var(--primary);
             padding: 0.5rem 1rem;
             border-radius: 50px;
@@ -327,7 +389,7 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
 
@@ -337,6 +399,13 @@
             overflow: hidden;
             cursor: pointer;
             aspect-ratio: 4/3;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
 
         .gallery-before, .gallery-after {
@@ -569,7 +638,7 @@
         .btn-submit:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
         }
 
         /* Footer */
@@ -784,6 +853,7 @@
         <div class="nav-container">
             <div class="logo">Sparkle<span>Garage</span></div>
             <ul class="nav-links">
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#testimonials">Reviews</a></li>
@@ -827,6 +897,40 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="section-header">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">Our Mission</h2>
+                </div>
+                <div class="about-text">
+                    <p class="mission-statement">We believe every homeowner deserves a clean, organized garage — without breaking the bank.</p>
+                    <p>At SparkleGarage Pro, we're a <strong>veteran-owned</strong> company committed to providing <strong>budget-friendly</strong> garage cleaning and organization services to the DMV metro area. We understand that life gets busy and garages often become the catch-all for everything. That's where we come in.</p>
+                    <p>Our team of dedicated professionals brings years of experience, attention to detail, and a genuine passion for transforming cluttered spaces into functional areas you'll be proud of. We offer transparent pricing with no hidden fees, because we believe quality service should be accessible to everyone.</p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <span class="value-icon">💰</span>
+                            <h4>Budget-Friendly</h4>
+                            <p>Affordable rates without compromising quality</p>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🎖️</span>
+                            <h4>Veteran Owned</h4>
+                            <p>Proudly veteran owned & operated, serving the DMV community</p>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">✅</span>
+                            <h4>Satisfaction Guaranteed</h4>
+                            <p>We're not done until you're 100% happy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="section-container">
@@ -862,9 +966,9 @@
                     <p>High-pressure cleaning for driveways, garage doors, and exterior surfaces. Remove stubborn stains and restore curb appeal instantly.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🔄</div>
-                    <h3>Maintenance Plans</h3>
-                    <p>Regular scheduled cleaning and maintenance to keep your garage spotless year-round. Flexible monthly or quarterly options available.</p>
+                    <div class="service-icon">🚛</div>
+                    <h3>Junk Removal</h3>
+                    <p>Fast and affordable hauling of unwanted items, old furniture, broken equipment, and debris. We responsibly dispose, donate, or recycle everything we take.</p>
                 </div>
             </div>
         </div>
@@ -880,33 +984,23 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <div class="gallery-before" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80');"></div>
-                    <div class="gallery-after" style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80');"></div>
+                    <div class="gallery-before" style="background-image: url('images/before/before1.png');"></div>
+                    <div class="gallery-after" style="background-image: url('images/after/after1.png');"></div>
                     <span class="gallery-label">Hover to see after</span>
                 </div>
                 <div class="gallery-item">
-                    <div class="gallery-before" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80');"></div>
-                    <div class="gallery-after" style="background-image: url('https://images.unsplash.com/photo-1622974590529-3fb7fdc0d0db?w=600&q=80');"></div>
+                    <div class="gallery-before" style="background-image: url('images/before/before2.png');"></div>
+                    <div class="gallery-after" style="background-image: url('images/after/after2.png');"></div>
                     <span class="gallery-label">Hover to see after</span>
                 </div>
                 <div class="gallery-item">
-                    <div class="gallery-before" style="background-image: url('https://images.unsplash.com/photo-1597766659308-56c24c1bfe7a?w=600&q=80');"></div>
-                    <div class="gallery-after" style="background-image: url('https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=600&q=80');"></div>
+                    <div class="gallery-before" style="background-image: url('images/before/before3.png');"></div>
+                    <div class="gallery-after" style="background-image: url('images/after/after3.png');"></div>
                     <span class="gallery-label">Hover to see after</span>
                 </div>
                 <div class="gallery-item">
-                    <div class="gallery-before" style="background-image: url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=600&q=80');"></div>
-                    <div class="gallery-after" style="background-image: url('https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80');"></div>
-                    <span class="gallery-label">Hover to see after</span>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-before" style="background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80');"></div>
-                    <div class="gallery-after" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80');"></div>
-                    <span class="gallery-label">Hover to see after</span>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-before" style="background-image: url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&q=80');"></div>
-                    <div class="gallery-after" style="background-image: url('https://images.unsplash.com/photo-1605152276897-4f618f831968?w=600&q=80');"></div>
+                    <div class="gallery-before" style="background-image: url('images/before/before4.png');"></div>
+                    <div class="gallery-after" style="background-image: url('images/after/after4.png');"></div>
                     <span class="gallery-label">Hover to see after</span>
                 </div>
             </div>
@@ -929,7 +1023,7 @@
                         <div class="author-avatar">MJ</div>
                         <div class="author-info">
                             <h4>Michael Johnson</h4>
-                            <p>Homeowner, Austin TX</p>
+                            <p>Homeowner, Arlington VA</p>
                         </div>
                     </div>
                 </div>
@@ -940,7 +1034,7 @@
                         <div class="author-avatar">SC</div>
                         <div class="author-info">
                             <h4>Sarah Chen</h4>
-                            <p>Homeowner, Denver CO</p>
+                            <p>Homeowner, Bethesda MD</p>
                         </div>
                     </div>
                 </div>
@@ -951,7 +1045,7 @@
                         <div class="author-avatar">RP</div>
                         <div class="author-info">
                             <h4>Robert Patel</h4>
-                            <p>Homeowner, Phoenix AZ</p>
+                            <p>Homeowner, Washington DC</p>
                         </div>
                     </div>
                 </div>
@@ -985,7 +1079,7 @@
                             <div class="contact-icon">📍</div>
                             <div class="contact-item-text">
                                 <h4>Service Area</h4>
-                                <p>Serving the Greater Metro Area</p>
+                                <p>Serving DC, Maryland & Virginia</p>
                             </div>
                         </div>
                         <div class="contact-item">
