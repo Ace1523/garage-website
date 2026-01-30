@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Garage Organization Checklist | Clutter Command</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid #FF6B00;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #121212;
+            margin-bottom: 1rem;
+        }
+
+        .logo span {
+            color: #FF6B00;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #121212;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .checklist-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: #FF6B00;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #FF6B00;
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .item-text strong {
+            display: block;
+            color: #121212;
+        }
+
+        .item-text span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .pro-tip {
+            background: linear-gradient(135deg, #FF6B00 0%, #FFB800 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .pro-tip strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 2rem;
+            background: #121212;
+            border-radius: 12px;
+            color: white;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: #aaa;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #FF6B00;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #E05A00;
+        }
+
+        .print-btn {
+            display: block;
+            margin: 2rem auto;
+            background: #121212;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .print-btn:hover {
+            background: #333;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                padding: 0;
+            }
+
+            .print-btn, .cta-section {
+                display: none;
+            }
+
+            .checklist-section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Clutter<span>Command</span></div>
+            <h1>20-Point Garage Organization Checklist</h1>
+            <p class="subtitle">Your step-by-step guide to a clean, functional garage</p>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">🖨️ Print This Checklist</button>
+
+        <div class="checklist-section">
+            <h2 class="section-title">📦 Phase 1: Declutter</h2>
+            <ul class="checklist">
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>1. Empty everything out</strong>
+                        <span>Pull all items out of the garage onto the driveway so you can see what you have</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>2. Sort into categories</strong>
+                        <span>Group items: tools, sports equipment, seasonal, automotive, gardening, etc.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>3. Create keep/donate/trash piles</strong>
+                        <span>Be ruthless — if you haven't used it in 2 years, it's time to let go</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>4. Dispose of hazardous materials properly</strong>
+                        <span>Old paint, chemicals, batteries — check local disposal guidelines</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>5. Schedule donation pickup</strong>
+                        <span>Call Habitat ReStore, Salvation Army, or local charities for free pickup</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2 class="section-title">🧹 Phase 2: Deep Clean</h2>
+            <ul class="checklist">
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>6. Sweep ceiling and walls</strong>
+                        <span>Remove cobwebs, dust, and debris from top to bottom</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>7. Clean windows and light fixtures</strong>
+                        <span>Maximize natural light — it makes the space feel bigger</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>8. Scrub/power wash the floor</strong>
+                        <span>Remove oil stains, dirt, and grime — use degreaser for tough spots</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>9. Check for pests</strong>
+                        <span>Look for mouse droppings, wasp nests, or ant trails and address them</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>10. Inspect for water damage or leaks</strong>
+                        <span>Check corners, around windows, and where walls meet the floor</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pro-tip">
+            <strong>💡 Pro Tip</strong>
+            Tackle your garage on a dry, mild day. You'll need space in the driveway, and extreme heat or cold makes the work miserable!
+        </div>
+
+        <div class="checklist-section">
+            <h2 class="section-title">🗂️ Phase 3: Plan & Zone</h2>
+            <ul class="checklist">
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>11. Measure your space</strong>
+                        <span>Note dimensions, ceiling height, and where outlets/switches are located</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>12. Create activity zones</strong>
+                        <span>Designate areas: parking, workshop, sports gear, gardening, storage</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>13. Plan vertical storage</strong>
+                        <span>Walls and ceiling are prime real estate — use them!</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>14. Keep frequently used items accessible</strong>
+                        <span>Daily items at eye level, seasonal items up high or in back</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>15. Leave room for your car!</strong>
+                        <span>The whole point — make sure you can actually park inside</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2 class="section-title">🔧 Phase 4: Organize & Store</h2>
+            <ul class="checklist">
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>16. Install shelving units</strong>
+                        <span>Heavy-duty metal shelving keeps items off the floor and visible</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>17. Add wall-mounted storage</strong>
+                        <span>Pegboards for tools, hooks for bikes, rails for ladders</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>18. Use clear bins with labels</strong>
+                        <span>See what's inside without opening — label everything!</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>19. Utilize ceiling space</strong>
+                        <span>Overhead racks are perfect for seasonal items and bulky gear</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <strong>20. Create a maintenance routine</strong>
+                        <span>15 minutes weekly keeps clutter from creeping back</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pro-tip">
+            <strong>🎯 Remember</strong>
+            An organized garage isn't just about looks — it saves you time, protects your belongings, and can even increase your home's value!
+        </div>
+
+        <div class="cta-section">
+            <h2>Need Help? We've Got You.</h2>
+            <p>Don't have time to tackle it yourself? Clutter Command specializes in garage transformations throughout the DC, Maryland, and Virginia area.</p>
+            <a href="index.html#contact" class="cta-btn">Get a Free Quote →</a>
+        </div>
+
+        <p style="text-align: center; margin-top: 2rem; color: #999; font-size: 0.9rem;">
+            © 2025 Clutter Command · Veteran-Owned · Serving the DMV<br>
+            <a href="index.html" style="color: #FF6B00;">cluttercommand.netlify.app</a>
+        </p>
+    </div>
+</body>
+</html>
