@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | Clutter Command</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #121212;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #121212 0%, #1F1F1F 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #2D2D2D;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        .logo span {
+            color: #FF6B00;
+        }
+
+        .logo a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: #B0B0B0;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #FF6B00;
+        }
+
+        .stat-label {
+            color: #6B6B6B;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .testimonial-card {
+            background: #1A1A1A;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #2D2D2D;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FF6B00 0%, #FFB800 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .author-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info p {
+            color: #6B6B6B;
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            margin-left: auto;
+            color: #FFB800;
+            font-size: 1.25rem;
+        }
+
+        .testimonial-text {
+            color: #B0B0B0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-text p {
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-tag {
+            display: inline-block;
+            background: rgba(255, 107, 0, 0.1);
+            color: #FF6B00;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #1A1A1A;
+            border-top: 1px solid #2D2D2D;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: #6B6B6B;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #FF6B00;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            background: #E05A00;
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #6B6B6B;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            color: #FF6B00;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .stats-bar {
+                gap: 2rem;
+            }
+
+            .testimonial-header {
+                flex-wrap: wrap;
+            }
+
+            .stars {
+                margin-left: 0;
+                margin-top: 0.5rem;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><a href="index.html">Clutter<span>Command</span></a></div>
+        <h1>What Our Customers Say</h1>
+        <p class="subtitle">Real stories from real homeowners across the DMV who transformed their garages with Clutter Command.</p>
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-number">4.9/5</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Garages Cleaned</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Would Recommend</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">MJ</div>
+                <div class="author-info">
+                    <h3>Michael Johnson</h3>
+                    <p>Arlington, VA</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>I'll be honest — I was embarrassed to even let anyone see my garage. Twenty years of accumulated stuff, boxes I hadn't opened since we moved in, broken furniture I kept meaning to fix. My wife had been asking me to deal with it for years.</p>
+                <p>The Clutter Command team showed up on time, worked efficiently, and most importantly, they didn't judge. They helped me sort through everything, donated what we didn't need, and organized the rest. Now I can actually park my car inside AND find my tools when I need them.</p>
+                <p>Worth every penny. Should have done this years ago.</p>
+            </div>
+            <span class="service-tag">Deep Clean + Junk Removal</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">SC</div>
+                <div class="author-info">
+                    <h3>Sarah Chen</h3>
+                    <p>Bethesda, MD</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>As a busy mom of three, our garage had become the dumping ground for everything — sports equipment, holiday decorations, outgrown toys, you name it. I couldn't even walk through it without tripping over something.</p>
+                <p>Clutter Command came in and completely transformed the space in just one day. They installed shelving, created zones for different activities, and now each kid has their own bin for their gear. The best part? My husband can finally park in the garage, which means no more scraping ice off the windshield in winter!</p>
+                <p>The team was professional, friendly, and really listened to what we needed. I've already recommended them to three neighbors.</p>
+            </div>
+            <span class="service-tag">Total Transformation</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">RP</div>
+                <div class="author-info">
+                    <h3>Robert Patel</h3>
+                    <p>Washington, DC</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>After 15 years of accumulating stuff, I was completely overwhelmed. Every time I thought about tackling the garage, I'd take one look and close the door. It felt like an impossible task.</p>
+                <p>What impressed me most about Clutter Command was their systematic approach. They didn't just throw things away — they helped me make decisions about what to keep, what to donate, and what had to go. They found things I'd forgotten I owned!</p>
+                <p>Now I have a proper workshop area where I can actually do projects. The floor is clean, everything has a place, and I feel like I got a whole new room in my house.</p>
+            </div>
+            <span class="service-tag">Deep Clean + Organization</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">LW</div>
+                <div class="author-info">
+                    <h3>Lisa Washington</h3>
+                    <p>Silver Spring, MD</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>We inherited my mother's house last year, and the garage was filled floor to ceiling with 40 years of memories. It was emotionally overwhelming to even think about sorting through it all.</p>
+                <p>The Clutter Command team was incredibly respectful and understanding of our situation. They worked with us to carefully go through everything, set aside family heirlooms, and properly dispose of the rest. They even found some valuable items we didn't know were there!</p>
+                <p>What could have been a traumatic experience turned into something manageable. I can't thank them enough for their patience and compassion.</p>
+            </div>
+            <span class="service-tag">Estate Cleanout</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">DM</div>
+                <div class="author-info">
+                    <h3>David Martinez</h3>
+                    <p>Alexandria, VA</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>I'm a car guy, and I'd always dreamed of having a clean garage where I could actually work on my vehicles. But over the years, it had turned into a storage unit for everything except cars.</p>
+                <p>Clutter Command helped me reclaim the space. They installed heavy-duty shelving, a proper workbench area, and even suggested a floor coating that looks amazing and is easy to clean. The transformation was unbelievable.</p>
+                <p>Now I actually enjoy spending time in my garage. My buddies can't believe it's the same space. Best investment I've made in my home.</p>
+            </div>
+            <span class="service-tag">Total Transformation + Floor Coating</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">KT</div>
+                <div class="author-info">
+                    <h3>Karen Thompson</h3>
+                    <p>Fairfax, VA</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>We were getting ready to sell our house, and our realtor told us the garage was hurting our chances. It was packed with junk and gave buyers a bad impression of the whole property.</p>
+                <p>Clutter Command came in and completely transformed it in less than a day. They hauled away two truckloads of stuff we didn't need and organized everything else. The realtor was shocked at the difference.</p>
+                <p>Our house sold within two weeks of listing, and the buyers specifically mentioned how impressed they were with the garage. Money well spent!</p>
+            </div>
+            <span class="service-tag">Pre-Sale Cleanout</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">JB</div>
+                <div class="author-info">
+                    <h3>James Brooks</h3>
+                    <p>Rockville, MD</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>As a veteran myself, I appreciate that Clutter Command is veteran-owned. But beyond that, they just do excellent work. The crew that came out was punctual, hardworking, and treated my property with respect.</p>
+                <p>My garage had become a catch-all for everything over the past decade. They sorted through it all, set up a logical organization system, and even labeled everything. Now I can find what I need in seconds instead of digging through piles.</p>
+                <p>Fair prices, honest work, no surprises. That's all I ask for, and that's exactly what I got.</p>
+            </div>
+            <span class="service-tag">Deep Clean + Organization</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">AP</div>
+                <div class="author-info">
+                    <h3>Amanda Pierce</h3>
+                    <p>Columbia, MD</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>I work from home and desperately needed to convert part of my garage into a home gym. But first, I had to deal with years of accumulated clutter. Every time I tried to tackle it myself, I'd get overwhelmed and give up.</p>
+                <p>Clutter Command made it happen. They cleared out the junk, deep cleaned the space, and even helped me plan the layout for my gym equipment. The whole process was stress-free.</p>
+                <p>Now I have a functional gym space AND organized storage in the same garage. It's like they doubled my usable space. I use it every single day!</p>
+            </div>
+            <span class="service-tag">Space Conversion</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">TN</div>
+                <div class="author-info">
+                    <h3>Thomas Nguyen</h3>
+                    <p>Tysons, VA</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>I'd gotten quotes from three other companies, and Clutter Command was not only the most affordable but also the most thorough in explaining what they'd do. No hidden fees, no surprises — just honest pricing for honest work.</p>
+                <p>The team arrived early, worked through the day, and left my garage looking better than it did when we first moved in. They even swept the driveway when they were done.</p>
+                <p>It's rare to find a company that under-promises and over-delivers these days. These guys are the real deal. Already planning to have them back for the basement!</p>
+            </div>
+            <span class="service-tag">Deep Clean</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="avatar">RH</div>
+                <div class="author-info">
+                    <h3>Rachel Hughes</h3>
+                    <p>Gaithersburg, MD</p>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="testimonial-text">
+                <p>My husband passed away last year, and dealing with his workshop in the garage was something I just couldn't face alone. There were tools, projects, and memories everywhere. I didn't know where to start.</p>
+                <p>The Clutter Command team was so gentle and understanding. They helped me decide what to keep, what my sons might want, and what could be donated to a local vocational school. They handled everything with care and respect.</p>
+                <p>I can't say enough good things about this company. They helped me through one of the hardest tasks I've ever faced, and they did it with kindness and professionalism. Thank you from the bottom of my heart.</p>
+            </div>
+            <span class="service-tag">Compassionate Cleanout</span>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready for Your Transformation?</h2>
+        <p>Join hundreds of happy homeowners across the DMV.</p>
+        <a href="index.html#contact" class="cta-btn">Get Your Free Quote →</a>
+        <br>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html>
