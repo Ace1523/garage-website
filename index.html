@@ -340,6 +340,46 @@
             }
         }
 
+        /* Video Section */
+        .video-section {
+            padding: 6rem 2rem;
+            background: var(--dark);
+        }
+
+        .video-section .section-title {
+            color: var(--white);
+        }
+
+        .video-section .section-subtitle {
+            color: var(--gray-300);
+        }
+
+        .video-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .video-wrapper {
+            width: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            aspect-ratio: 9/16;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .video-wrapper {
+                width: 280px;
+            }
+        }
+
         /* Services Section */
         .services {
             padding: 6rem 2rem;
@@ -1341,6 +1381,31 @@
                             <p>We're not done until you're 100% happy</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">See It In Action</span>
+                <h2 class="section-title">Watch the Transformation</h2>
+                <p class="section-subtitle">From cluttered chaos to organized paradise — see what we can do.</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-wrapper">
+                    <video controls playsinline poster="images/after/after1.png">
+                        <source src="videos/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-wrapper">
+                    <video controls playsinline poster="images/after/after2.png">
+                        <source src="videos/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
