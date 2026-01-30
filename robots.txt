@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cluttercommand.netlify.app/sitemap.xml
