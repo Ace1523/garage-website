@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:unsplash.com)",
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(python3:*)",
+      "Bash(brew install:*)",
+      "Bash(magick identify:*)",
+      "Bash(open:*)"
+    ]
+  }
+}

@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SparkleGarage Pro | Professional Garage Cleaning Services</title>
+    <title>Clutter Command | Garage Cleaning & Organization | Washington DC, MD, VA</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Veteran-owned garage cleaning and organization services in Washington DC, Maryland, and Virginia. Budget-friendly decluttering, deep cleaning, junk removal, and storage solutions. Free estimates!">
+    <meta name="keywords" content="garage cleaning, garage organization, decluttering, junk removal, DMV, Washington DC, Maryland, Virginia, veteran owned">
+    <meta name="author" content="Clutter Command">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Clutter Command | Professional Garage Cleaning in DC, MD, VA">
+    <meta property="og:description" content="Transform your cluttered garage into an organized space. Veteran-owned, budget-friendly service in the DMV area.">
+    <meta property="og:image" content="images/after/after1.png">
+    <meta property="og:url" content="https://cluttercommand.com">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clutter Command | Garage Cleaning & Organization">
+    <meta name="twitter:description" content="Transform your cluttered garage into an organized space. Veteran-owned, budget-friendly service in the DMV area.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -31,10 +52,34 @@
             line-height: 1.6;
         }
 
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+        }
+
+        .promo-banner a {
+            color: var(--white);
+            text-decoration: underline;
+            margin-left: 0.5rem;
+        }
+
+        .promo-banner a:hover {
+            text-decoration: none;
+        }
+
         /* Navigation */
         nav {
             position: fixed;
-            top: 0;
+            top: 40px;
             left: 0;
             right: 0;
             background: rgba(255, 255, 255, 0.95);
@@ -101,7 +146,7 @@
             background: linear-gradient(135deg, var(--dark) 0%, #1F1F1F 100%);
             display: flex;
             align-items: center;
-            padding: 8rem 2rem 4rem;
+            padding: 10rem 2rem 4rem;
             position: relative;
             overflow: hidden;
         }
@@ -381,6 +426,142 @@
             line-height: 1.7;
         }
 
+        /* Pricing Section */
+        .pricing {
+            padding: 6rem 2rem;
+            background: var(--dark);
+        }
+
+        .pricing .section-title,
+        .pricing .section-subtitle {
+            color: var(--white);
+        }
+
+        .pricing .section-subtitle {
+            color: var(--gray-300);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid var(--primary);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            margin-bottom: 1rem;
+        }
+
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .price-unit {
+            display: block;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        .pricing-desc {
+            color: var(--gray-500);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            color: var(--gray-700);
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .pricing-cta {
+            display: block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .pricing-cta:hover {
+            background: var(--primary-dark);
+        }
+
+        .pricing-note {
+            text-align: center;
+            color: var(--gray-300);
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-5px);
+            }
+        }
+
         /* Gallery Section */
         .gallery {
             padding: 6rem 2rem;
@@ -424,7 +605,8 @@
             opacity: 0;
         }
 
-        .gallery-item:hover .gallery-after {
+        .gallery-item:hover .gallery-after,
+        .gallery-item.active .gallery-after {
             opacity: 1;
         }
 
@@ -442,8 +624,59 @@
             transition: all 0.3s;
         }
 
-        .gallery-item:hover .gallery-label {
+        .gallery-item:hover .gallery-label,
+        .gallery-item.active .gallery-label {
             background: var(--primary);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            padding: 3rem 2rem;
+            background: var(--white);
+            border-top: 1px solid var(--gray-100);
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .badges-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .badge-icon {
+            font-size: 2.5rem;
+        }
+
+        .badge-text {
+            text-align: left;
+        }
+
+        .badge-text strong {
+            display: block;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .badge-text span {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .badges-grid {
+                gap: 2rem;
+            }
+
+            .badge-item {
+                flex-basis: 45%;
+            }
         }
 
         /* Testimonials Section */
@@ -512,6 +745,72 @@
         .author-info p {
             color: var(--gray-500);
             font-size: 0.875rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 2rem;
+            background: var(--gray-100);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+            text-align: left;
+            font-family: inherit;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--gray-700);
+            line-height: 1.7;
         }
 
         /* Contact Section */
@@ -639,6 +938,95 @@
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+        }
+
+        /* Lead Magnet */
+        .lead-magnet {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--gray-100);
+            border: 2px dashed var(--primary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .lead-magnet-icon {
+            font-size: 2rem;
+        }
+
+        .lead-magnet-text {
+            flex: 1;
+        }
+
+        .lead-magnet-text strong {
+            color: var(--dark);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .lead-magnet-text p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .lead-magnet-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.3s;
+        }
+
+        .lead-magnet-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Referral Banner */
+        .referral-banner {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .referral-banner .section-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .referral-icon {
+            font-size: 2.5rem;
+        }
+
+        .referral-text strong {
+            color: var(--white);
+            font-size: 1.3rem;
+            display: block;
+        }
+
+        .referral-text p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0.25rem 0 0;
+        }
+
+        @media (max-width: 768px) {
+            .lead-magnet {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .referral-banner .section-container {
+                flex-direction: column;
+            }
         }
 
         /* Footer */
@@ -848,10 +1236,15 @@
     </style>
 </head>
 <body>
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        🎉 <strong>Limited Time:</strong> 15% OFF all services for new customers! Use code <strong>CLEAN15</strong> · <a href="#contact">Claim Offer</a>
+    </div>
+
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Sparkle<span>Garage</span></div>
+            <div class="logo">Clutter<span>Command</span></div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -907,7 +1300,7 @@
                 </div>
                 <div class="about-text">
                     <p class="mission-statement">We believe every homeowner deserves a clean, organized garage — without breaking the bank.</p>
-                    <p>At SparkleGarage Pro, we're a <strong>veteran-owned</strong> company committed to providing <strong>budget-friendly</strong> garage cleaning and organization services to the DMV metro area. We understand that life gets busy and garages often become the catch-all for everything. That's where we come in.</p>
+                    <p>At Clutter Command, we're a <strong>veteran-owned</strong> company committed to providing <strong>budget-friendly</strong> garage cleaning and organization services to the DMV metro area. We understand that life gets busy and garages often become the catch-all for everything. That's where we come in.</p>
                     <p>Our team of dedicated professionals brings years of experience, attention to detail, and a genuine passion for transforming cluttered spaces into functional areas you'll be proud of. We offer transparent pricing with no hidden fees, because we believe quality service should be accessible to everyone.</p>
                     <div class="about-values">
                         <div class="value-item">
@@ -974,6 +1367,77 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">Transparent, Budget-Friendly Rates</h2>
+                <p class="section-subtitle">No hidden fees. No surprises. Just honest pricing for quality service.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Basic Clean</h3>
+                        <div class="price">
+                            <span class="price-amount">$199</span>
+                            <span class="price-unit">starting at</span>
+                        </div>
+                    </div>
+                    <p class="pricing-desc">Perfect for light cleaning and quick organization</p>
+                    <ul class="pricing-features">
+                        <li>✓ Sweep & mop floors</li>
+                        <li>✓ Dust shelves & surfaces</li>
+                        <li>✓ Basic organization</li>
+                        <li>✓ Cobweb removal</li>
+                        <li>✓ 1-car garage</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Get Quote</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Deep Clean</h3>
+                        <div class="price">
+                            <span class="price-amount">$399</span>
+                            <span class="price-unit">starting at</span>
+                        </div>
+                    </div>
+                    <p class="pricing-desc">Complete transformation for most garages</p>
+                    <ul class="pricing-features">
+                        <li>✓ Everything in Basic</li>
+                        <li>✓ Power wash floors</li>
+                        <li>✓ Declutter & sort items</li>
+                        <li>✓ Organize into zones</li>
+                        <li>✓ Haul away 1 truckload</li>
+                        <li>✓ 2-car garage</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Get Quote</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Total Transformation</h3>
+                        <div class="price">
+                            <span class="price-amount">$799</span>
+                            <span class="price-unit">starting at</span>
+                        </div>
+                    </div>
+                    <p class="pricing-desc">The works — we handle everything</p>
+                    <ul class="pricing-features">
+                        <li>✓ Everything in Deep Clean</li>
+                        <li>✓ Install shelving/storage</li>
+                        <li>✓ Floor coating available</li>
+                        <li>✓ Unlimited junk removal</li>
+                        <li>✓ 3+ car garage</li>
+                        <li>✓ 30-day touch-up included</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Get Quote</a>
+                </div>
+            </div>
+            <p class="pricing-note">* Final pricing based on garage size, condition, and specific needs. Free estimates with no obligation.</p>
+        </div>
+    </section>
+
     <!-- Before/After Gallery -->
     <section class="gallery" id="gallery">
         <div class="section-container">
@@ -986,22 +1450,58 @@
                 <div class="gallery-item">
                     <div class="gallery-before" style="background-image: url('images/before/before1.png');"></div>
                     <div class="gallery-after" style="background-image: url('images/after/after1.png');"></div>
-                    <span class="gallery-label">Hover to see after</span>
+                    <span class="gallery-label">Tap or hover to reveal</span>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-before" style="background-image: url('images/before/before2.png');"></div>
                     <div class="gallery-after" style="background-image: url('images/after/after2.png');"></div>
-                    <span class="gallery-label">Hover to see after</span>
+                    <span class="gallery-label">Tap or hover to reveal</span>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-before" style="background-image: url('images/before/before3.png');"></div>
                     <div class="gallery-after" style="background-image: url('images/after/after3.png');"></div>
-                    <span class="gallery-label">Hover to see after</span>
+                    <span class="gallery-label">Tap or hover to reveal</span>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-before" style="background-image: url('images/before/before4.png');"></div>
                     <div class="gallery-after" style="background-image: url('images/after/after4.png');"></div>
-                    <span class="gallery-label">Hover to see after</span>
+                    <span class="gallery-label">Tap or hover to reveal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="section-container">
+            <div class="badges-grid">
+                <div class="badge-item">
+                    <span class="badge-icon">⭐</span>
+                    <div class="badge-text">
+                        <strong>4.9/5 Rating</strong>
+                        <span>Google Reviews</span>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-icon">🎖️</span>
+                    <div class="badge-text">
+                        <strong>Veteran Owned</strong>
+                        <span>& Operated</span>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-icon">✅</span>
+                    <div class="badge-text">
+                        <strong>Licensed & Insured</strong>
+                        <span>Fully Protected</span>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-icon">🏆</span>
+                    <div class="badge-text">
+                        <strong>500+ Garages</strong>
+                        <span>Transformed</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1040,13 +1540,80 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"After 15 years of accumulating stuff, I was overwhelmed. SparkleGarage made the process painless and now I have a workshop I actually enjoy spending time in."</p>
+                    <p class="testimonial-text">"After 15 years of accumulating stuff, I was overwhelmed. Clutter Command made the process painless and now I have a workshop I actually enjoy spending time in."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">RP</div>
                         <div class="author-info">
                             <h4>Robert Patel</h4>
                             <p>Homeowner, Washington DC</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Got questions? We've got answers.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does a typical garage cleaning take?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most single-car garages take 2-4 hours, while two-car garages typically take 4-6 hours. Total transformations with junk removal and organization may take a full day. We'll give you an accurate time estimate during your free consultation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What areas do you service?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We proudly serve the entire DMV metro area including Washington DC, Northern Virginia (Arlington, Alexandria, Fairfax, Loudoun), and Maryland (Bethesda, Silver Spring, Rockville, Montgomery County, Prince George's County).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do I need to be home during the service?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It's helpful if you're home for the first 15-30 minutes to walk us through your goals and identify items to keep, donate, or discard. After that, you're free to go about your day — we'll handle everything.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What happens to the junk you remove?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We're committed to responsible disposal. Items in good condition are donated to local charities. Recyclable materials go to recycling centers. Only true trash goes to the landfill. We can provide donation receipts upon request.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are you licensed and insured?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We are fully licensed and carry comprehensive liability insurance. Your property and belongings are protected while we work. We're happy to provide proof of insurance upon request.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer any discounts?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer 10% off for veterans, first responders, and seniors. We also have a referral program — get $50 off your next service for every friend you refer. Ask about our seasonal promotions too!</p>
                     </div>
                 </div>
             </div>
@@ -1091,7 +1658,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" action="#" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/xkobzvwd" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
@@ -1130,6 +1697,27 @@
                     </div>
                     <button type="submit" class="btn-submit">Get My Free Quote →</button>
                 </form>
+
+                <!-- Lead Magnet -->
+                <div class="lead-magnet">
+                    <span class="lead-magnet-icon">📋</span>
+                    <div class="lead-magnet-text">
+                        <strong>Free Download: Garage Organization Checklist</strong>
+                        <p>Get our 20-point checklist to start organizing your garage today!</p>
+                    </div>
+                    <a href="#" class="lead-magnet-btn">Download Free</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Referral Callout -->
+        <div class="referral-banner">
+            <div class="section-container">
+                <span class="referral-icon">💸</span>
+                <div class="referral-text">
+                    <strong>Refer a Friend, Get $50!</strong>
+                    <p>Know someone with a messy garage? Refer them to us and you both get $50 off your next service.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1139,7 +1727,7 @@
         <div class="footer-container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <div class="logo">Sparkle<span>Garage</span></div>
+                    <div class="logo">Clutter<span>Command</span></div>
                     <p>Professional garage cleaning and organization services. Transforming cluttered spaces into functional, spotless garages since 2015.</p>
                 </div>
                 <div class="footer-column">
@@ -1171,7 +1759,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 SparkleGarage Pro. All rights reserved.</p>
+                <p>&copy; 2025 Clutter Command. All rights reserved.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook">f</a>
                     <a href="#" aria-label="Instagram">ig</a>
@@ -1183,6 +1771,21 @@
     </footer>
 
     <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+
+        // Gallery click/tap for mobile
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1198,11 +1801,7 @@
         });
 
         // Form submission handler
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your inquiry! We\'ll get back to you within 24 hours with your free quote.');
-            this.reset();
-        });
+        // Form submission handled by Formspree
 
         // Navbar background on scroll
         window.addEventListener('scroll', function() {
